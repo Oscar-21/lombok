@@ -1,8 +1,3 @@
-package com.example.demo.controllers;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
 import java.util.Set;
 
 public class BuilderExample {
@@ -31,7 +26,7 @@ public class BuilderExample {
         private boolean created$set;
         private String name;
         private int age;
-        private ArrayList<String> occupations;
+        private java.util.ArrayList<String> occupations;
 
         BuilderExampleBuilder() {
 		}
@@ -61,7 +56,7 @@ public class BuilderExample {
             return this;
         }
 
-        public BuilderExampleBuilder occupations(Collection<? extends String> occupations) {
+        public BuilderExampleBuilder occupations(java.util.Collection<? extends String> occupations) {
             if (this.occupations == null) {
                 this.occupations = new java.util.ArrayList<String>();
             }
@@ -80,7 +75,7 @@ public class BuilderExample {
 
         public BuilderExample build() {
             // complicated switch statement to produce a compact properly sized immutable set omitted.
-            Set<String> occupations = new HashSet<String>();
+            Set<String> occupations = new java.util.HashSet<String>();
             if (!this.occupations.isEmpty()) {
                 this.occupations.forEach(occupations::add);
             }
